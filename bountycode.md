@@ -46,6 +46,12 @@ contract RandomNumberGenerator is VRFConsumerBase {
     }
 }
 
+
+
+```
+
+
+```javascript
 async function caller() {
     await randomNumContract.getRandomNumber(reels[0].length - 1);
     const randNo = await randomNumContract.getRandom();
@@ -65,4 +71,9 @@ async function caller() {
   }
 
 
+
+
 ```
+
+
+
