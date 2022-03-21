@@ -24,6 +24,9 @@ users will get rewording with coins.
 
 **6)**  Connect with Builders: Members can contact, send messages to other programmers and builders on the platform which will open up a door with various opportunities where they can build something together, help each other with finding career opportunities and many more. 
 
+##  Tech Stack:
+####  We have used a)Harmony Blockchain, b)ChainLink VRF, c)Moralis Cloud functions, d) Covalent to Fetch NFTs, e) IPFS storage for f) Biconomy for gasless transactions g) Login with Unstoppable.
+
 ![MicrosoftTeams-image (17)](https://user-images.githubusercontent.com/69969675/159275912-1d6f7d30-ae1c-4819-acef-1e760b9d5abb.png)
 
 
@@ -42,7 +45,7 @@ users will get rewording with coins.
 ![MicrosoftTeams-image (22)](https://user-images.githubusercontent.com/69969675/159276056-5fbcf566-546c-44ae-92f6-2811b497b429.png)
 
 
-
+**WAGMI 😊🚀🚀**
 
 
 
