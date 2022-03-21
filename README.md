@@ -30,23 +30,23 @@ users will get rewording with coins.
 
 # Bounty list 
 
-1) Harmony -  Tokenize non fungible assets and store them on Harmony Blockchain.
+##### 1) Harmony -  Tokenize non fungible assets and store them on Harmony Blockchain.
 
-2) Chainlink VRF: We have used chainlink VRF to generate a random image in our Slot Machine - Lucky lottery game. 
+##### 2) Chainlink VRF: We have used chainlink VRF to generate a random image in our Slot Machine - Lucky lottery game. 
 
-3) Moralis
+##### a) cloud functions to interact with chain b) Smartcontract event sync & indexing c) Moralis email plugin d) Moralis Covalent plugin
 
-a) cloud functions to interact with chain b) Smartcontract event sync & indexing c) Moralis email plugin d) Moralis Covalent plugin
+##### Filecoin/IPFS: Data of all the a) reward based NFT games, b) contests and c) user's post NFT are stored NFT Metadata on IPFS.
 
-💾Filecoin/IPFS: Data of all the a) reward based NFT games, b) contests and c) user's post NFT are stored NFT Metadata on IPFS.
+**⌛️ Covalent-** Fatch NFT data with chainid and contract address
 
-Covalent- Fatch NFT data with chainid and contract address
-           a) User NFT posts d) Contest NFT Transactions 
-         b) Memory Game NFTs: In this game user can earn NFTs by playing memory power game and chance to get and airdrops
-       c) Lottery NFTs: Here we used covalent to retrieve all the lucky lottery NFTs user won. 
+a) Memory Game NFTs: In this game user can earn NFTs by playing memory power game and chance to get and airdrops
+b) Lottery NFTs: Here we used covalent to retrieve all the lucky lottery NFTs user won.
+c) User NFT posts
+d) Contest NFT Transactions 
 
-Biconomy - We have used Biconomy to allow users to have Gasless transactions while minting NFT posts, Creating Contest NFT etc. 
-Unstoppable Domain - We have used “Login with Unstoppable” to make it easy for users and domain owners to sign up in the most easy and secure way. 
+##### Biconomy - We have used Biconomy to allow users to have Gasless transactions while minting NFT posts, Creating Contest NFT etc. 
+Unstoppable Domain - We have used “Login with Unstoppable” to make it easy for users and domain owners to sign up in the most easy and secure way.
 
 ![MicrosoftTeams-image (17)](https://user-images.githubusercontent.com/69969675/159275912-1d6f7d30-ae1c-4819-acef-1e760b9d5abb.png)
 
