@@ -75,5 +75,86 @@ async function caller() {
 
 ```
 
+# Harmony : Tokenize non fungible assets and store them on Harmony Blockchain.
+
+https://github.com/jaydippatel83/hackerhouse/blob/master/hardhat.config.js
+
+
+
+```javascript
+
+require("@nomiclabs/hardhat-waffle"); 
+const HARMONY_PRIVATE_KEY = process.env.REACT_APP_HARMONY_PRIVATE_KEY;
+module.exports = {
+  solidity: "0.8.4",
+  networks: { 
+    harmony: {
+      url: `https://api.s0.b.hmny.io`,
+      accounts: [HARMONY_PRIVATE_KEY]
+    }, 
+  },
+};
+
+```
+https://github.com/jaydippatel83/hackerhouse/blob/master/src/components/modal/SendGift.js
+
+```javascript
+useEffect(async () => {
+    query.equalTo("tokenId", props.data.saveData.tokenId);
+    const dd = await query.find();
+    const getAmount = JSON.parse(JSON.stringify(dd));
+    setPostData(getAmount);
+    const hmy = new Harmony("https://api.s0.b.hmny.io/", { 
+      chainType: ChainType.Harmony,
+      chainId: ChainID.HmyTestnet,
+    });  
+    const add = converter('one').toBech32( user && user.attributes.ethAddress);
+    hmy.blockchain
+      .getBalance({ address: add})
+      .then((response) => {
+        console.log(
+          "balance in ONEs: " + fromWei(hexToNumber(response.result), Units.one)
+        );
+        setBal(fromWei(hexToNumber(response.result), Units.one));
+      }); 
+    const opt = { chain: "ropsten", address: user.attributes.account };
+    const tmetadata = Moralis.Web3.getAllERC20(opt).then((res) => {
+      setEth(ethers.utils.formatUnits(res[0].balance, 18));
+    });
+  }, [user]);
+```
+# IPFS  : Data of all the a) reward based NFT games, b) contests and c) user's post NFT are stored NFT Metadata on IPFS.
+https://github.com/jaydippatel83/hackerhouse/blob/master/src/components/modal/Modal.js
+
+```javascript
+const file = new Moralis.File("data.json", { base64: btoa(JSON.stringify(data)) });
+const dataUri = await file.saveIPFS();
+const uri = dataUri._ipfs;
+```
+# Covalent :  Fatch NFT data with chainid and contract address
+               a) User NFT posts d) Contest NFT Transactions 
+              b) Memory Game NFTs: In this game user can earn NFTs by playing memory power game and chance to get and airdrops
+             c) Lottery NFTs: Here we used covalent to retrieve all the lucky lottery NFTs user won. 
+    
+https://github.com/jaydippatel83/hackerhouse/blob/master/src/components/mintedNft/mintedNft.js
+
+```javascript
+const covalent = Moralis.Plugins.covalent;
+    async function getMintedNft() { 
+        const ids = [...tokenid]; 
+        const result = await axios.get(`https://api.covalenthq.com/v1/1666700000/tokens/${tokenAddres}/transactions_v2/?key=ckey_d6812b57760b43418ee399bdf1d`); 
+        console.log(result);
+        const dd = result.data.items && result.data.items.map(async (e) => {
+            ids.push(e.token_id); 
+        })
+        setTokenid(ids);
+    }
+    useEffect(() => {
+        Moralis.initPlugins();
+        getMintedNft();
+    }, []);
+
+```
+
 
 
