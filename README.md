@@ -28,7 +28,7 @@ users will get rewording with coins.
 ####  We have used a)Harmony Blockchain, b)ChainLink VRF, c)Moralis Cloud functions, d) Covalent to Fetch NFTs, e) IPFS storage for f) Biconomy for gasless transactions g) Login with Unstoppable.
 
 
-# Bounty list 
+# Bounty list & Code snippat : https://github.com/Disha1998/HackerHouse.tech/blob/patch-1/bountycode.md
 
 ##### 1) Harmony -  Tokenize non fungible assets and store them on Harmony Blockchain.
 
